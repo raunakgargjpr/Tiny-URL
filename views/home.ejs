@@ -1,0 +1,17 @@
+<%- include("header") -%>
+  <div class="box" id="heading">
+    <h1> TinyURL </h1>
+  </div>
+
+  <div class="box">
+      <form class="item" action="/" method="post">
+        <input type="text" placeholder="Enter a long URL to make a TinyURL" name="longUrlEntered" autocomplete="off">
+        <button type="submit">=></button>
+      </form> 
+      <% if(shortURL.length === 0) { %>
+        <p>Here you will get your TinyURL!</p>
+      <% } else { %> 
+        <p><%=shortURL%></p>
+      <% } %>
+  </div>
+<%- include("footer") -%>
